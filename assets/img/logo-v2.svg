@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+  <!-- Background -->
+  <circle cx="120" cy="100" r="95" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+  
+  <!-- Laptop screen -->
+  <rect x="65" y="50" width="110" height="75" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect x="72" y="57" width="96" height="61" fill="#0f172a"/>
+  
+  <!-- Code editor header bar -->
+  <rect x="72" y="57" width="96" height="8" fill="#334155"/>
+  <circle cx="78" cy="61" r="1.5" fill="#ef4444"/>
+  <circle cx="84" cy="61" r="1.5" fill="#f59e0b"/>
+  <circle cx="90" cy="61" r="1.5" fill="#22c55e"/>
+  
+  <!-- Code lines -->
+  <g font-family="monospace" font-size="7">
+    <text x="78" y="76" fill="#38bdf8">&lt;network&gt;</text>
+    <text x="78" y="86" fill="#22c55e">  server.start()</text>
+    <text x="78" y="96" fill="#a78bfa">  route: /api</text>
+    <text x="78" y="106" fill="#f59e0b">  status: active</text>
+    <text x="78" y="112" fill="#38bdf8">&lt;/network&gt;</text>
+  </g>
+  
+  <!-- Blinking cursor -->
+  <rect x="140" y="105" width="5" height="7" fill="#38bdf8">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Laptop base -->
+  <path d="M 55 125 L 65 125 L 65 132 L 175 132 L 175 125 L 185 125 L 190 145 L 50 145 Z" 
+        fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="70" y1="128" x2="170" y2="128" stroke="#334155" stroke-width="0.5"/>
+  <line x1="70" y1="130" x2="170" y2="130" stroke="#334155" stroke-width="0.5"/>
+  
+  <!-- Tape Reel 1 (Left - Exact IBM 729 style) -->
+  <g transform="translate(38, 85)">
+    <!-- Outer reel circle -->
+    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#9ca3af" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="22" fill="#111827"/>
+    
+    <!-- Dark Blue Tape wound inside -->
+    <circle cx="0" cy="0" r="19" fill="#1e3a8a"/>
+    <circle cx="0" cy="0" r="18" fill="#1d4ed8"/>
+    
+    <!-- Rotating transparent hub with metal clamp -->
+    <g id="tape1-rotation">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 0 0"
+        to="360 0 0"
+        dur="4s"
+        repeatCount="indefinite"/>
+      <!-- Clear/Transparent hub inner -->
+      <circle cx="0" cy="0" r="9" fill="#94a3b8" opacity="0.3"/>
+      <!-- Spokes (3-way classic IBM reel design) -->
+      <polygon points="0,0 -2,-9 2,-9" fill="#d1d5db"/>
+      <polygon points="0,0 8,4 6,7" fill="#d1d5db"/>
+      <polygon points="0,0 -8,4 -6,7" fill="#d1d5db"/>
+      <!-- Metallic center clamp -->
+      <circle cx="0" cy="0" r="3.5" fill="#e5e7eb" stroke="#374151" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="1.5" fill="#1f2937"/>
+    </g>
+  </g>
+
+  <!-- Tape Reel 2 (Right - Exact IBM 729 style) -->
+  <g transform="translate(202, 85)">
+    <!-- Outer reel circle -->
+    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#9ca3af" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="22" fill="#111827"/>
+    
+    <!-- Empty clear reel (just a thin inner ring of tape) -->
+    <circle cx="0" cy="0" r="19" fill="none" stroke="#334155" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="6" fill="#1e293b"/>
+    
+    <!-- Rotating clear hub -->
+    <g id="tape2-rotation">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 0 0"
+        to="-360 0 0"
+        dur="3.5s"
+        repeatCount="indefinite"/>
+      <!-- Clear/Transparent hub inner -->
+      <circle cx="0" cy="0" r="9" fill="#94a3b8" opacity="0.3"/>
+      <!-- Spokes -->
+      <polygon points="0,0 -2,-9 2,-9" fill="#d1d5db"/>
+      <polygon points="0,0 8,4 6,7" fill="#d1d5db"/>
+      <polygon points="0,0 -8,4 -6,7" fill="#d1d5db"/>
+      <!-- Metallic center clamp -->
+      <circle cx="0" cy="0" r="3.5" fill="#e5e7eb" stroke="#374151" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="1.5" fill="#1f2937"/>
+    </g>
+  </g>
+</svg>

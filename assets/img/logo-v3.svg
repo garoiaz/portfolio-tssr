@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  
+  <!-- Laptop design 3: Modern MacBook-style -->
+  
+  <!-- Screen -->
+  <rect x="40" y="45" width="120" height="80" rx="3" fill="#334155" stroke="#38bdf8" stroke-width="2.5"/>
+  
+  <!-- Screen inner display -->
+  <rect x="47" y="52" width="106" height="66" fill="#0f172a"/>
+  
+  <!-- Terminal window with realistic look -->
+  <g>
+    <!-- Window title bar -->
+    <rect x="52" y="57" width="96" height="10" fill="#1e293b" rx="1"/>
+    <circle cx="58" cy="62" r="2" fill="#ef4444"/>
+    <circle cx="65" cy="62" r="2" fill="#f59e0b"/>
+    <circle cx="72" cy="62" r="2" fill="#22c55e"/>
+    <text x="80" y="64" font-family="monospace" font-size="5" fill="#94a3b8">terminal</text>
+    
+    <!-- Terminal content -->
+    <text x="56" y="78" font-family="monospace" font-size="6.5" fill="#22c55e">$ ssh admin@server</text>
+    <text x="56" y="88" font-family="monospace" font-size="6.5" fill="#38bdf8">Connected to 192.168.1.1</text>
+    <text x="56" y="98" font-family="monospace" font-size="6.5" fill="#a78bfa">[root@tssr ~]#</text>
+    <text x="56" y="108" font-family="monospace" font-size="6.5" fill="#f59e0b">systemctl status nginx</text>
+    
+    <!-- Cursor -->
+    <rect x="56" y="110" width="7" height="2" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Laptop base (realistic perspective) -->
+  <path d="M 30 125 L 40 125 L 45 130 L 155 130 L 160 125 L 170 125 L 175 140 Q 175 143 172 143 L 28 143 Q 25 143 25 140 Z" 
+        fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+  
+  <!-- Trackpad -->
+  <rect x="85" y="132" width="30" height="8" rx="2" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8"/>
+  
+  <!-- Badge with gear icon -->
+  <g transform="translate(155, 60)">
+    <circle cx="0" cy="0" r="10" fill="#38bdf8"/>
+    <!-- Gear icon -->
+    <path d="M -3 -5 L -1 -5 L -1 -7 L 1 -7 L 1 -5 L 3 -5 L 3 -3 L 5 -3 L 5 -1 L 7 -1 L 7 1 L 5 1 L 5 3 L 3 3 L 3 5 L 1 5 L 1 7 L -1 7 L -1 5 L -3 5 L -3 3 L -5 3 L -5 1 L -7 1 L -7 -1 L -5 -1 L -5 -3 L -3 -3 Z" 
+          fill="#0f172a"/>
+    <circle cx="0" cy="0" r="2.5" fill="#0f172a"/>
+  </g>
+</svg>

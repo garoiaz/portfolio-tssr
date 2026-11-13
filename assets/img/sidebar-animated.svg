@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 400" width="120" height="400">
+  <style>
+    .led-green { fill: #22c55e; }
+    .led-orange { fill: #f59e0b; }
+    .led-red { fill: #ef4444; }
+    .led-blue { fill: #38bdf8; }
+    .led-lime { fill: #84cc16; }
+    
+    @keyframes led-blink {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px currentColor); }
+      50% { opacity: 0.3; filter: none; }
+    }
+    
+    .blink-fast { animation: led-blink 0.6s infinite; }
+    .blink-med { animation: led-blink 1.2s infinite; }
+    .blink-slow { animation: led-blink 2.4s infinite; }
+  </style>
+
+  <!-- Rack Background -->
+  <rect width="120" height="400" fill="#1a1d24" rx="6" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Top Section: Two circular dials/ports -->
+  <circle cx="38" cy="30" r="10" fill="#111827" stroke="#4b5563" stroke-width="2"/>
+  <circle cx="38" cy="30" r="3" fill="#38bdf8"/>
+  
+  <circle cx="82" cy="30" r="10" fill="#111827" stroke="#4b5563" stroke-width="2"/>
+  <circle cx="82" cy="30" r="3" fill="#22c55e"/>
+
+  <!-- Row 1 -->
+  <rect x="12" y="60" width="96" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="18" y="70" width="22" height="16" rx="3" class="led-green blink-slow"/>
+  <rect x="49" y="70" width="22" height="16" rx="3" class="led-orange blink-med"/>
+  <rect x="80" y="70" width="22" height="16" rx="3" class="led-red blink-fast"/>
+
+  <!-- Row 2 -->
+  <rect x="12" y="105" width="96" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="18" y="115" width="22" height="16" rx="3" class="led-green blink-fast"/>
+  <rect x="49" y="115" width="22" height="16" rx="3" class="led-lime blink-slow"/>
+  <rect x="80" y="115" width="22" height="16" rx="3" class="led-lime blink-med"/>
+
+  <!-- Row 3 -->
+  <rect x="12" y="150" width="96" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="18" y="160" width="22" height="16" rx="3" class="led-orange blink-fast"/>
+  <rect x="49" y="160" width="22" height="16" rx="3" class="led-red blink-slow"/>
+  <rect x="80" y="160" width="22" height="16" rx="3" class="led-red blink-med"/>
+
+  <!-- Row 4 -->
+  <rect x="12" y="195" width="96" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="18" y="205" width="22" height="16" rx="3" class="led-orange blink-med"/>
+  <rect x="49" y="205" width="22" height="16" rx="3" class="led-lime blink-fast"/>
+  <rect x="80" y="205" width="22" height="16" rx="3" class="led-orange blink-slow"/>
+
+  <!-- Row 5 -->
+  <rect x="12" y="240" width="96" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="18" y="250" width="22" height="16" rx="3" class="led-blue blink-slow"/>
+  <rect x="49" y="250" width="22" height="16" rx="3" class="led-orange blink-med"/>
+  <rect x="80" y="250" width="22" height="16" rx="3" class="led-orange blink-fast"/>
+
+  <!-- Row 6 (Bottom - Maroon border highlight) -->
+  <rect x="12" y="285" width="96" height="42" rx="3" fill="#050505" stroke="#7f1d1d" stroke-width="2"/>
+  <rect x="18" y="297" width="26" height="18" rx="3" class="led-red blink-fast"/>
+  <rect x="47" y="297" width="26" height="18" rx="3" class="led-red blink-med"/>
+  <rect x="76" y="297" width="26" height="18" rx="3" class="led-blue blink-slow"/>
+
+  <!-- Rack Mount Screws -->
+  <circle cx="6" cy="15" r="2" fill="#475569"/>
+  <circle cx="114" cy="15" r="2" fill="#475569"/>
+  <circle cx="6" cy="385" r="2" fill="#475569"/>
+  <circle cx="114" cy="385" r="2" fill="#475569"/>
+</svg>

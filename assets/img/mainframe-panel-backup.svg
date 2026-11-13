@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 500" width="120" height="500">
+  <style>
+    @keyframes led-blink {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px currentColor); }
+      50% { opacity: 0.3; filter: none; }
+    }
+    .blink-fast { animation: led-blink 0.6s infinite; }
+    .blink-med { animation: led-blink 1.2s infinite; }
+    .blink-slow { animation: led-blink 2.4s infinite; }
+  </style>
+
+  <!-- Main panel background -->
+  <rect width="120" height="500" fill="#dcd7cd" rx="4"/>
+  <rect x="4" y="4" width="112" height="492" fill="#e6e2d8" rx="2"/>
+  
+  <!-- Top IBM Header Badge -->
+  <rect x="35" y="15" width="50" height="16" fill="#111827" rx="1"/>
+  <text x="60" y="27" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">IBM 729</text>
+  
+  <!-- Upper Section: Tape Deck Window (Dark frame with glass) -->
+  <rect x="15" y="45" width="90" height="85" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="2"/>
+  <rect x="18" y="48" width="84" height="79" fill="#0b0f19"/>
+  
+  <!-- Tape Reel 1 (Left - Dark Blue Magnetic Tape Wound) -->
+  <g id="tape1" transform="translate(40, 85)">
+    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#9ca3af" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="22" fill="#111827"/>
+    <circle cx="0" cy="0" r="19" fill="#1e3a8a"/>
+    <circle cx="0" cy="0" r="18" fill="#1d4ed8"/>
+    <g id="tape1-rotation">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="4s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="9" fill="#94a3b8" opacity="0.3"/>
+      <polygon points="0,0 -2,-9 2,-9" fill="#d1d5db"/>
+      <polygon points="0,0 8,4 6,7" fill="#d1d5db"/>
+      <polygon points="0,0 -8,4 -6,7" fill="#d1d5db"/>
+      <circle cx="0" cy="0" r="3.5" fill="#e5e7eb" stroke="#374151" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="1.5" fill="#1f2937"/>
+    </g>
+  </g>
+  
+  <!-- Tape Reel 2 (Right - Empty / Clear Reel) -->
+  <g id="tape2" transform="translate(80, 85)">
+    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#9ca3af" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="22" fill="#111827"/>
+    <circle cx="0" cy="0" r="19" fill="none" stroke="#334155" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="6" fill="#1e293b"/>
+    <g id="tape2-rotation">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="3.5s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="9" fill="#94a3b8" opacity="0.3"/>
+      <polygon points="0,0 -2,-9 2,-9" fill="#d1d5db"/>
+      <polygon points="0,0 8,4 6,7" fill="#d1d5db"/>
+      <polygon points="0,0 -8,4 -6,7" fill="#d1d5db"/>
+      <circle cx="0" cy="0" r="3.5" fill="#e5e7eb" stroke="#374151" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="1.5" fill="#1f2937"/>
+    </g>
+  </g>
+  
+  <!-- Control Panel Row -->
+  <g transform="translate(30, 115)">
+    <rect x="0" y="0" width="10" height="5" rx="1" fill="#ef4444"/>
+    <rect x="13" y="0" width="10" height="5" rx="1" fill="#f59e0b"/>
+    <rect x="26" y="0" width="10" height="5" rx="1" fill="#22c55e"/>
+    <rect x="39" y="0" width="10" height="5" rx="1" fill="#38bdf8"/>
+    <rect x="52" y="0" width="10" height="5" rx="1" fill="#94a3b8"/>
+  </g>
+  
+  <!-- Lower Section: Classic IBM Blue Insert Window with Rows & Buttons -->
+  <rect x="15" y="140" width="90" height="345" rx="2" fill="#1f2937"/>
+  <rect x="18" y="143" width="84" height="339" fill="#2563eb"/>
+  
+  <!-- Brushed metal handles -->
+  <rect x="12" y="150" width="3" height="325" rx="1" fill="#9ca3af"/>
+  <rect x="12" y="150" width="1" height="325" rx="0.5" fill="#ffffff" opacity="0.6"/>
+  <rect x="105" y="150" width="3" height="325" rx="1" fill="#9ca3af"/>
+  <rect x="105" y="150" width="1" height="325" rx="0.5" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- 6 Rows of Industrial Rack Buttons (Matching user sketch) -->
+  <!-- Row 1 -->
+  <g transform="translate(24, 160)">
+    <rect x="0" y="0" width="72" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="6" y="8" width="16" height="20" rx="3" fill="#22c55e" class="blink-slow"/>
+    <rect x="28" y="8" width="16" height="20" rx="3" fill="#f59e0b" class="blink-med"/>
+    <rect x="50" y="8" width="16" height="20" rx="3" fill="#ef4444" class="blink-fast"/>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(24, 205)">
+    <rect x="0" y="0" width="72" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="6" y="8" width="16" height="20" rx="3" fill="#22c55e" class="blink-fast"/>
+    <rect x="28" y="8" width="16" height="20" rx="3" fill="#84cc16" class="blink-slow"/>
+    <rect x="50" y="8" width="16" height="20" rx="3" fill="#84cc16" class="blink-med"/>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(24, 250)">
+    <rect x="0" y="0" width="72" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="6" y="8" width="16" height="20" rx="3" fill="#f59e0b" class="blink-fast"/>
+    <rect x="28" y="8" width="16" height="20" rx="3" fill="#ef4444" class="blink-slow"/>
+    <rect x="50" y="8" width="16" height="20" rx="3" fill="#ef4444" class="blink-med"/>
+  </g>
+
+  <!-- Row 4 -->
+  <g transform="translate(24, 295)">
+    <rect x="0" y="0" width="72" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="6" y="8" width="16" height="20" rx="3" fill="#f59e0b" class="blink-med"/>
+    <rect x="28" y="8" width="16" height="20" rx="3" fill="#84cc16" class="blink-fast"/>
+    <rect x="50" y="8" width="16" height="20" rx="3" fill="#f59e0b" class="blink-slow"/>
+  </g>
+
+  <!-- Row 5 -->
+  <g transform="translate(24, 340)">
+    <rect x="0" y="0" width="72" height="36" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="6" y="8" width="16" height="20" rx="3" fill="#38bdf8" class="blink-slow"/>
+    <rect x="28" y="8" width="16" height="20" rx="3" fill="#f59e0b" class="blink-med"/>
+    <rect x="50" y="8" width="16" height="20" rx="3" fill="#f59e0b" class="blink-fast"/>
+  </g>
+
+  <!-- Row 6 (Bottom - Maroon border highlight) -->
+  <g transform="translate(24, 385)">
+    <rect x="0" y="0" width="72" height="45" rx="3" fill="#050505" stroke="#7f1d1d" stroke-width="2"/>
+    <rect x="6" y="10" width="18" height="24" rx="3" fill="#ef4444" class="blink-fast"/>
+    <rect x="27" y="10" width="18" height="24" rx="3" fill="#ef4444" class="blink-med"/>
+    <rect x="48" y="10" width="18" height="24" rx="3" fill="#38bdf8" class="blink-slow"/>
+  </g>
+
+  <!-- Glass reflections -->
+  <line x1="25" y1="180" x2="95" y2="280" stroke="#ffffff" stroke-width="1.5" opacity="0.15"/>
+  <line x1="35" y1="180" x2="105" y2="280" stroke="#ffffff" stroke-width="1.5" opacity="0.08"/>
+</svg>

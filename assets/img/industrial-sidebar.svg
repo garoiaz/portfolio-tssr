@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 350" width="100" height="350">
+    <style>
+        .panel-bg { fill: #1a1d23; stroke: #333; stroke-width: 2; }
+        .row-frame { fill: #000; stroke: #444; stroke-width: 1; }
+        .knob { fill: #222; stroke: #555; stroke-width: 1.5; }
+        
+        .led { filter: blur(1px); transition: opacity 0.2s; }
+        .led-green { fill: #22c55e; }
+        .led-orange { fill: #f59e0b; }
+        .led-red { fill: #ef4444; }
+        .led-blue { fill: #38bdf8; }
+        .led-lime { fill: #a3e635; }
+        
+        @keyframes blink { 0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px currentColor); } 50% { opacity: 0.3; filter: none; } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+        
+        .blink-fast { animation: blink 0.5s infinite; }
+        .blink-med { animation: blink 1.2s infinite; }
+        .blink-slow { animation: blink 3s infinite; }
+        .pulse { animation: pulse 2s infinite; }
+    </style>
+
+    <!-- Main Rack Chassis -->
+    <rect x="2" y="2" width="96" height="346" rx="4" class="panel-bg"/>
+    
+    <!-- Top Dials/Knobs -->
+    <circle cx="30" cy="35" r="12" class="knob"/>
+    <line x1="30" y1="35" x2="30" y2="25" stroke="#38bdf8" stroke-width="2" transform-origin="30 35">
+        <animateTransform attributeName="transform" type="rotate" from="0 30 35" to="360 30 35" dur="10s" repeatCount="indefinite"/>
+    </line>
+    
+    <circle cx="70" cy="35" r="12" class="knob"/>
+    <line x1="70" y1="35" x2="70" y2="25" stroke="#38bdf8" stroke-width="2" transform-origin="70 35">
+        <animateTransform attributeName="transform" type="rotate" from="360 70 35" to="0 70 35" dur="8s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Row 1 -->
+    <rect x="10" y="70" width="80" height="35" rx="2" class="row-frame"/>
+    <rect x="15" y="80" width="15" height="15" class="led led-green blink-slow"/>
+    <rect x="42" y="80" width="15" height="15" class="led led-orange pulse"/>
+    <rect x="70" y="80" width="15" height="15" class="led led-red blink-fast"/>
+
+    <!-- Row 2 -->
+    <rect x="10" y="115" width="80" height="35" rx="2" class="row-frame"/>
+    <rect x="15" y="125" width="20" height="15" class="led led-green pulse"/>
+    <rect x="45" y="125" width="15" height="15" class="led led-lime blink-med"/>
+    <rect x="70" y="125" width="15" height="15" class="led led-lime pulse"/>
+
+    <!-- Row 3 -->
+    <rect x="10" y="160" width="80" height="35" rx="2" class="row-frame"/>
+    <rect x="15" y="170" width="15" height="15" class="led led-orange blink-med"/>
+    <rect x="42" y="170" width="15" height="15" class="led led-red pulse"/>
+    <rect x="65" y="170" width="22" height="15" class="led led-red blink-slow"/>
+
+    <!-- Row 4 -->
+    <rect x="10" y="205" width="80" height="35" rx="2" class="row-frame"/>
+    <rect x="15" y="215" width="15" height="15" class="led led-orange pulse"/>
+    <rect x="42" y="215" width="15" height="15" class="led led-lime blink-fast"/>
+    <rect x="70" y="215" width="15" height="15" class="led led-orange blink-med"/>
+
+    <!-- Row 5 -->
+    <rect x="10" y="250" width="80" height="35" rx="2" class="row-frame"/>
+    <rect x="15" y="260" width="15" height="15" class="led led-blue blink-slow"/>
+    <rect x="42" y="260" width="15" height="15" class="led led-orange pulse"/>
+    <rect x="70" y="260" width="15" height="15" class="led led-orange pulse"/>
+
+    <!-- Row 6 (Bottom - Special Border) -->
+    <rect x="10" y="295" width="80" height="35" rx="2" fill="#000" stroke="#800" stroke-width="1.5"/>
+    <rect x="15" y="305" width="15" height="15" class="led led-red blink-fast"/>
+    <rect x="42" y="305" width="15" height="15" class="led led-red pulse"/>
+    <rect x="70" y="305" width="15" height="15" class="led led-blue blink-med"/>
+</svg>

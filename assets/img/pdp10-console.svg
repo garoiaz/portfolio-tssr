@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 500" width="160" height="500">
+  <style>
+    @keyframes led-blink {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px currentColor); }
+      50% { opacity: 0.3; filter: none; }
+    }
+    .blink-fast { animation: led-blink 0.5s infinite; }
+    .blink-med { animation: led-blink 1.2s infinite; }
+    .blink-slow { animation: led-blink 2.2s infinite; }
+  </style>
+
+  <!-- Main console background (DEC PDP-10 Light Gray / Off-white retro style matching logo-v3 palette) -->
+  <rect width="160" height="500" fill="#0f172a" rx="6" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect x="5" y="5" width="150" height="490" fill="#1e293b" rx="4"/>
+  
+  <!-- Tier 1: Top Header & Emergency Panel -->
+  <rect x="12" y="15" width="136" height="70" rx="3" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Key lock switch (CPU / CE) -->
+  <circle cx="30" cy="50" r="8" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <rect x="28" y="47" width="4" height="8" fill="#38bdf8"/>
+  <text x="30" y="36" font-family="monospace" font-size="6" fill="#94a3b8" text-anchor="middle">CPU</text>
+
+  <!-- Mechanical counters (7354 / 0317) -->
+  <rect x="52" y="40" width="34" height="18" rx="2" fill="#0b0f19" stroke="#475569" stroke-width="1"/>
+  <text x="69" y="53" font-family="monospace" font-size="9" fill="#38bdf8" text-anchor="middle">7354</text>
+  
+  <!-- Panic / Emergency Red Button -->
+  <circle cx="120" cy="50" r="14" fill="#991b1b" stroke="#7f1d1d" stroke-width="2"/>
+  <circle cx="120" cy="50" r="10" fill="#ef4444" class="blink-fast"/>
+  <text x="120" y="75" font-family="monospace" font-size="6" fill="#ef4444" text-anchor="middle" font-weight="bold">PANIC</text>
+
+  <!-- Tier 2: System Conditions & Check Lights -->
+  <rect x="12" y="95" width="136" height="90" rx="3" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="112" font-family="monospace" font-size="7" fill="#38bdf8" text-anchor="middle" font-weight="bold">SYSTEM CONDITIONS</text>
+  
+  <!-- Matrix of check lights -->
+  <g transform="translate(25, 128)">
+    <circle cx="0" cy="0" r="4" fill="#ef4444" class="blink-fast"/>
+    <text x="10" y="4" font-family="monospace" font-size="6" fill="#94a3b8">TH</text>
+    
+    <circle cx="50" cy="0" r="4" fill="#f59e0b" class="blink-slow"/>
+    <text x="60" y="4" font-family="monospace" font-size="6" fill="#94a3b8">O-L</text>
+    
+    <circle cx="100" cy="0" r="4" fill="#ef4444" class="blink-med"/>
+    <text x="110" y="4" font-family="monospace" font-size="6" fill="#94a3b8">CTRL</text>
+
+    <circle cx="0" cy="24" r="4" fill="#f59e0b" class="blink-med"/>
+    <text x="10" y="28" font-family="monospace" font-size="6" fill="#94a3b8">COMP</text>
+    
+    <circle cx="50" cy="24" r="4" fill="#ef4444" class="blink-fast"/>
+    <text x="60" y="28" font-family="monospace" font-size="6" fill="#94a3b8">W-STOP</text>
+    
+    <circle cx="100" cy="24" r="4" fill="#22c55e" class="blink-slow"/>
+    <text x="110" y="28" font-family="monospace" font-size="6" fill="#94a3b8">CARRY</text>
+  </g>
+
+  <!-- Tier 3: Accumulator & Register Status Bits (Matrix) -->
+  <rect x="12" y="195" width="136" height="130" rx="3" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="212" font-family="monospace" font-size="8" fill="#38bdf8" text-anchor="middle" font-weight="bold">ACCUMULATOR / REGISTERS</text>
+  
+  <g transform="translate(20, 230)">
+    <!-- Register row 1 -->
+    <text x="0" y="8" font-family="monospace" font-size="6" fill="#94a3b8">AC 0-7:</text>
+    <g transform="translate(45, 0)">
+      <circle cx="0" cy="6" r="3" fill="#38bdf8" class="blink-fast"/>
+      <circle cx="12" cy="6" r="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="24" cy="6" r="3" fill="#22c55e" class="blink-slow"/>
+      <circle cx="36" cy="6" r="3" fill="#f59e0b" class="blink-med"/>
+      <circle cx="48" cy="6" r="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="60" cy="6" r="3" fill="#38bdf8" class="blink-fast"/>
+      <circle cx="72" cy="6" r="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="84" cy="6" r="3" fill="#22c55e" class="blink-slow"/>
+    </g>
+
+    <!-- Register row 2 -->
+    <text x="0" y="32" font-family="monospace" font-size="6" fill="#94a3b8">PC REG:</text>
+    <g transform="translate(45, 24)">
+      <circle cx="0" cy="6" r="3" fill="#22c55e" class="blink-slow"/>
+      <circle cx="12" cy="6" r="3" fill="#38bdf8" class="blink-fast"/>
+      <circle cx="24" cy="6" r="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="36" cy="6" r="3" fill="#f59e0b" class="blink-med"/>
+      <circle cx="48" cy="6" r="3" fill="#22c55e" class="blink-slow"/>
+      <circle cx="60" cy="6" r="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="72" cy="6" r="3" fill="#38bdf8" class="blink-fast"/>
+      <circle cx="84" cy="6" r="3" fill="#f59e0b" class="blink-med"/>
+    </g>
+
+    <!-- Toggle switches track -->
+    <g transform="translate(0, 52)">
+      <text x="0" y="8" font-family="monospace" font-size="6" fill="#94a3b8">SWITCHES:</text>
+      <rect x="45" y="0" width="87" height="16" fill="#1e293b" rx="2" stroke="#475569" stroke-width="1"/>
+      <!-- Tiny toggle levers -->
+      <line x1="53" y1="2" x2="53" y2="14" stroke="#38bdf8" stroke-width="2"/>
+      <line x1="65" y1="4" x2="65" y2="12" stroke="#94a3b8" stroke-width="2"/>
+      <line x1="77" y1="2" x2="77" y2="14" stroke="#38bdf8" stroke-width="2"/>
+      <line x1="89" y1="2" x2="89" y2="14" stroke="#38bdf8" stroke-width="2"/>
+      <line x1="101" y1="4" x2="101" y2="12" stroke="#94a3b8" stroke-width="2"/>
+      <line x1="113" y1="2" x2="113" y2="14" stroke="#38bdf8" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Tier 4: Instruction Counter (PDP Style LED Display) -->
+  <rect x="12" y="335" width="136" height="65" rx="3" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="352" font-family="monospace" font-size="7" fill="#38bdf8" text-anchor="middle" font-weight="bold">INSTRUCTION COUNTER</text>
+  
+  <g transform="translate(25, 362)">
+    <rect x="0" y="0" width="110" height="24" fill="#0b0f19" rx="2" stroke="#38bdf8" stroke-width="1"/>
+    <text x="55" y="17" font-family="monospace" font-size="12" fill="#38bdf8" text-anchor="middle" font-weight="bold">014 762 503</text>
+  </g>
+
+  <!-- Tier 5: Operational Desk Console (Colored Pushbuttons) -->
+  <rect x="12" y="410" width="136" height="75" rx="3" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Control Pushbuttons (START / STOP / READY) -->
+  <g transform="translate(22, 422)">
+    <rect x="0" y="0" width="34" height="20" rx="3" fill="#16a34a" stroke="#15803d" stroke-width="1"/>
+    <text x="17" y="13" font-family="monospace" font-size="6" fill="#ffffff" text-anchor="middle" font-weight="bold">START</text>
+    
+    <rect x="38" y="0" width="34" height="20" rx="3" fill="#dc2626" stroke="#b91c1c" stroke-width="1"/>
+    <text x="55" y="13" font-family="monospace" font-size="6" fill="#ffffff" text-anchor="middle" font-weight="bold">STOP</text>
+    
+    <rect x="76" y="0" width="34" height="20" rx="3" fill="#0284c7" stroke="#0369a1" stroke-width="1"/>
+    <text x="93" y="13" font-family="monospace" font-size="6" fill="#ffffff" text-anchor="middle" font-weight="bold">READY</text>
+  </g>
+
+  <!-- Bottom Executive Buttons (LOAD / EXEC) -->
+  <g transform="translate(22, 450)">
+    <rect x="0" y="0" width="52" height="24" rx="3" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
+    <text x="26" y="15" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="bold">LOAD</text>
+    
+    <rect x="58" y="0" width="52" height="24" rx="3" fill="#16a34a" stroke="#15803d" stroke-width="1.5"/>
+    <text x="84" y="15" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="bold">EXEC</text>
+  </g>
+</svg>
